@@ -1,41 +1,7 @@
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 120px 150px 0 150px;
-    background-color: #fffdf2;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    /* Hauteur de la barre de header */
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre subtile */
-    display: flex;
-    justify-content: center;
-    /* Centre horizontalement */
-    align-items: center;
-    /* Centre verticalement */
-    padding: 30px 20px;
-    /* Ajoute un peu de padding horizontal */
-}
-
-img {
-    border-radius: 50%;
-    /* Rend l'image circulaire */
-    width: 100px;
-    /* Taille de l'image */
-    height: 100px;
-    /* Assure que l'image reste carrée */
-}
-
 .photo-ryann img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
 }
 
 .description-ryann {
@@ -65,6 +31,7 @@ img {
 .description-ryann p {
     font-size: 30px;
     padding-left: 20px;
+    font-weight: 500;
 }
 
 .title-third {
@@ -78,7 +45,10 @@ img {
 }
 
 .title-hobbies {
-    font-size: 30px;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 500;
+    color: #0088cc;
 }
 
 .scroll-to-top {
@@ -114,8 +84,8 @@ img {
 
 .hobbies-box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes de largeur égale */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colonnes de largeur égale */
     gap: 20px;
     /* Espacement entre les carrés */
     margin: 40px 0;
@@ -123,43 +93,211 @@ img {
 }
 
 .box {
-    background: #fff6c3;
-    /* Fond uni bleu */
+    background: #eeeeee;
+    /* Couleur de fond */
+    border: 1px solid #666666;
     /* Bordure subtile */
-    border-radius: 25px;
+    border-radius: 50px;
     /* Coins arrondis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Ombre subtile */
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 0.3;
-    /* Rend les divs parfaitement carrées */
+    height: 60px;
+    /* Hauteur des carrés */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     /* Animation au survol */
 }
 
 .box:hover {
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
     /* Agrandit légèrement au survol */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+    color: #0088cc;
     /* Ombre plus prononcée au survol */
-    background: hsl(52, 100%, 80%);
-    /* Change la couleur de fond au survol */
 }
 
 .box-link {
     text-decoration: none;
     /* Supprime le soulignement des liens */
-    color: rgb(0, 0, 0);
     /* Couleur du texte */
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hobbies-box {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colonnes sur les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hobbies-box {
+        grid-template-columns: 1fr;
+        /* 1 colonne sur les petits écrans */
+    }
+}
+
+/* Styles pour les divs des films */
+.boxFilm1,
+.boxFilm2 {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.linkFilm2 {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+.linkFilm2:hover {
+    text-decoration: underline;
+}
+
+
+
+.boxFilm1 h3,
+.boxFilm2 h3 {
+    font-size: 24px;
+    /* Grossit le texte */
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Ajoute un espace entre le titre et l'iframe */
+    color: #0088cc;
+    /* Couleur du texte */
+}
+
+/* Grille pour afficher les divs côte à côte */
+.films-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes de largeur égale */
+    gap: 20px;
+    /* Espacement entre les colonnes */
+    margin: 40px 0;
+    /* Espacement autour de la grille */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .films-container {
+        grid-template-columns: 1fr;
+        /* 1 colonne sur les petits écrans */
+    }
+}
+
+.boxMusic1,
+.boxMusic2 {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Conteneur principal pour les jeux */
+.jeux-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes de largeur égale */
+    gap: 20px;
+    /* Espacement entre les colonnes */
+    margin-top: 20px;
+    /* Espacement autour de la grille */
+}
+
+/* Style pour chaque jeu */
+.boxJeux {
+    /* Bordure subtile */
+    border-radius: 8px;
+    /* Coins arrondis */
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Style pour le titre */
+.boxJeux h3 {
+    font-size: 24px;
+    /* Grossit le texte */
+    font-weight: bold;
+    /* Ajoute un espace entre le titre et l'image */
+    color: #333;
+    /* Couleur du texte */
+}
+
+/* Style pour les images */
+.boxJeux img {
+    width: 100%;
+    /* L'image occupe toute la largeur du conteneur */
+    height: 70%;
+    /* Conserve les proportions de l'image */
+    border-radius: 8px;
+    /* Coins arrondis pour les images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation au survol */
+}
+
+/* Effet au survol des images */
+.boxJeux img:hover {
+    transform: scale(1.05);
+    /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .jeux-container {
+        grid-template-columns: 1fr;
+        /* 1 colonne sur les petits écrans */
+    }
+}
+
+.buttonBackHome {
+    display: flex;
+    justify-content: center;
+    /* Centre le bouton horizontalement */
+    margin: 20px 0;
+    /* Espacement autour du bouton */
+}
+
+.buttonBackHomeLink {
+    display: inline-flex;
+    /* Utilise flexbox pour centrer le contenu */
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    background-color: #0088cc;
+    /* Couleur de fond bleue */
+    color: white;
+    /* Couleur du texte */
+    font-size: 18px;
+    /* Taille du texte */
+    font-weight: bold;
+    /* Texte en gras */
+    text-decoration: none;
+    /* Supprime le soulignement */
+    padding: 15px 35px;
+    /* Espacement intérieur (vertical et horizontal) */
+    border-radius: 50px;
+    /* Forme de pilule */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Animation fluide */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile */
+    line-height: 1;
+    /* Assure que la hauteur de ligne n'affecte pas l'alignement */
+}
+
+.buttonBackHomeLink:hover {
+    text-decoration: underline;
 }

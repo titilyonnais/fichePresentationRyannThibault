@@ -1,0 +1,57 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 120px 150px 0 150px;
+    /* Valeur par défaut pour les grands écrans */
+    background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    body {
+        padding: 120px 100px 0 100px;
+        /* Réduit les marges latérales sur les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 120px 50px 0 50px;
+        /* Réduit encore plus les marges latérales sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 120px 20px 0 20px;
+        /* Marges minimales sur les très petits écrans */
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* Hauteur de la barre de header */
+    background-color: white;
+    z-index: 1000;
+    /* Ombre subtile */
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    padding: 30px 20px;
+    border-bottom: 1px solid #979797;
+    /* Ajoute un peu de padding horizontal */
+}
+
+.logoLink img {
+    border-radius: 50%;
+    /* Rend l'image circulaire */
+    width: 100px;
+    /* Taille de l'image */
+    height: 100px;
+    /* Assure que l'image reste carrée */
+}

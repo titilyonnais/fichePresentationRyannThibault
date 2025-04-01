@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Les Films & Séries préférés de Ryann</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/CSS/header.css">
+    <link rel="stylesheet" href="/public/CSS/footer.css">
+    <link rel="icon" href="/assets/ico-site.ico" type="image/x-icon">
 </head>
 
 <body>
-    films
+    <button id="scrollToTop" class="scroll-to-top" title="Remonter en haut">
+        <img src="/assets/up_arrow.svg" alt="Remonter en haut">
+    </button>
+    <header>
+        <div class="logo">
+            <a href="/public/index.html" class="logoLink">
+                <img src="/assets/images/logo.jpg" alt="Logo de la page" width="100" height="100">
+            </a>
+        </div>
+    </header>
+
+    <div class="films-container">
+        <div class="boxFilm1">
+            <a href="https://www.canalplus.com/snowfall/h/9155494_50001?autoplay=true&utm_source=googleAssistant&utm_medium=app-to-app"
+                class="linkFilm2" target="_blank">
+                <h3>Snowfall</h3>
+            </a>
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/2ga1eCIO5W4?si=Ja_Xt4T_7agNBKFu&amp;controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="boxFilm2">
+            <a href="https://www.netflix.com/watch/80186863?source=35" class="linkFilm2" target="_blank">
+                <h3>Humbrella Academy</h3>
+            </a>
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/m72aT-pvdiI?si=AXNWzUmZAlR_nDdE&amp;controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="buttonBackHome">
+        <a href="/public/index.html" class="buttonBackHomeLink">Retour à l'accueil</a>
+    </div>
+
+    <footer>
+        <div class="links-ryann">
+            <div class="practical-links">
+                <ul class="practical-list">
+                    <li><a href="https://github.com/mp5daFool" class="practical-link-list" target="_blank">GitHub</a>
+                    </li>
+                    <li><a href="https://la-toile-emlyon.slack.com/team/U08JCM3211C" class="practical-link-list"
+                            target="_blank">Slack</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
