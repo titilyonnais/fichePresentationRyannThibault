@@ -1,19 +1,3 @@
-document.querySelectorAll('.link-list').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault(); // Empêche le comportement par défaut du lien
-        const targetId = this.getAttribute('href').substring(1); // Récupère l'ID cible
-        const targetElement = document.getElementById(targetId); // Trouve l'élément cible
-        if (targetElement) {
-            const offset = 10; // Décalage en pixels
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({
-                top: elementPosition - offset,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
 const scrollToTopButton = document.getElementById('scrollToTop');
 
 // Affiche le bouton lorsque l'utilisateur fait défiler vers le bas
