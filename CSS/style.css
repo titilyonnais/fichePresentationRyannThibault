@@ -241,21 +241,27 @@ body {
     /* Centre verticalement */
     align-items: center;
     /* Centre horizontalement */
+    text-decoration: none;
 }
 
 /* Style pour le titre */
 .boxJeux h3 {
     font-size: 24px;
-    /* Grossit le texte */
     font-weight: bold;
     margin-bottom: 20px;
-    /* Ajoute un espace entre le titre et l'image */
     color: #0088cc;
-    /* Couleur du texte */
     text-align: center;
-    /* Centre le texte horizontalement */
     line-height: 1.5;
-    /* Ajuste l'espacement vertical du texte */
+    text-decoration: none;
+}
+
+.linkJeux2 {
+    text-decoration: none;
+}
+
+.linkJeux2:hover {
+    text-decoration: underline;
+    color: #0088cc;
 }
 
 /* Style pour les images des jeux */
