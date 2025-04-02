@@ -210,17 +210,25 @@
     /* 2 colonnes de largeur égale */
     gap: 20px;
     /* Espacement entre les colonnes */
-    margin-top: 20px;
+    margin: 40px 0;
     /* Espacement autour de la grille */
 }
 
 /* Style pour chaque jeu */
 .boxJeux {
-    /* Bordure subtile */
     border-radius: 8px;
     /* Coins arrondis */
-    padding: 0 20px;
+    padding: 20px;
+    /* Espacement intérieur */
     text-align: center;
+    display: flex;
+    /* Utilise flexbox pour centrer le contenu */
+    flex-direction: column;
+    /* Aligne les éléments verticalement */
+    justify-content: center;
+    /* Centre verticalement */
+    align-items: center;
+    /* Centre horizontalement */
 }
 
 /* Style pour le titre */
@@ -228,17 +236,24 @@
     font-size: 24px;
     /* Grossit le texte */
     font-weight: bold;
+    margin-bottom: 20px;
     /* Ajoute un espace entre le titre et l'image */
-    color: #333;
+    color: #0088cc;
     /* Couleur du texte */
+    text-align: center;
+    /* Centre le texte horizontalement */
+    line-height: 1.5;
+    /* Ajuste l'espacement vertical du texte */
 }
 
-/* Style pour les images */
+/* Style pour les images des jeux */
 .boxJeux img {
-    width: 100%;
+    width: 90%;
     /* L'image occupe toute la largeur du conteneur */
-    height: 70%;
-    /* Conserve les proportions de l'image */
+    height: 300px;
+    /* Hauteur fixe pour uniformiser les images */
+    object-fit: cover;
+    /* Coupe l'image pour qu'elle s'adapte au conteneur */
     border-radius: 8px;
     /* Coins arrondis pour les images */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -300,4 +315,75 @@
 
 .buttonBackHomeLink:hover {
     text-decoration: underline;
+}
+
+/* Conteneur principal pour les plats */
+.plats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes de largeur égale */
+    gap: 20px;
+    /* Espacement entre les colonnes */
+    margin: 40px 0;
+    /* Espacement autour de la grille */
+}
+
+/* Style pour chaque plat */
+.boxPlats {
+    /* Bordure subtile */
+    border-radius: 8px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espacement intérieur */
+    text-align: center;
+}
+
+/* Style pour le titre */
+.boxPlats h3 {
+    font-size: 24px;
+    /* Grossit le texte */
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Ajoute un espace entre le titre et l'image */
+    color: #0088cc;
+    /* Couleur du texte */
+}
+
+/* Style pour les images */
+.boxPlats img {
+    width: 100%;
+    /* L'image occupe toute la largeur du conteneur */
+    height: 300px;
+    /* Hauteur fixe pour uniformiser les images */
+    object-fit: cover;
+    /* Coupe l'image pour qu'elle s'adapte au conteneur */
+    border-radius: 8px;
+    /* Coins arrondis pour les images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation au survol */
+}
+
+/* Effet au survol des images */
+.boxPlats img:hover {
+    transform: scale(1.01);
+    /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Ombre plus prononcée au survol */
+}
+
+.linkPlats2 {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+.linkPlats2:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plats-container {
+        grid-template-columns: 1fr;
+        /* 1 colonne sur les petits écrans */
+    }
 }
