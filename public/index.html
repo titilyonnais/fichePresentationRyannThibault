@@ -5,70 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiche Présentation - Ryann & Thibault</title>
+    <!-- feuille CSS générale -->
     <link rel="stylesheet" href="/public/style.css">
+    <!-- feuille CSS pour le header -->
     <link rel="stylesheet" href="/public/CSS/header.css">
+    <!-- feuille CSS pour le footer -->
     <link rel="stylesheet" href="/public/CSS/footer.css">
+    <!-- icone à coté du titre de la page -->
     <link rel="icon" href="/assets/ico-site.ico" type="image/x-icon">
 </head>
 
 <body>
-    <button id="scrollToTop" class="scroll-to-top" title="Remonter en haut">
-        <img src="/assets/up_arrow.svg" alt="Remonter en haut">
+    <!-- bouton en bas à droite pour remonter en haut de la page lié avec scrolltotop.js-->
+    <button id="scrollToTop" class="scrollToTop" title="Remonter en haut">
+        <!-- image du bouton de flèche vers le haut -->
+        <img class="scrollToTopImage" src="/assets/up_arrow.svg" alt="Remonter en haut">
     </button>
+
+    <!-- header du site -->
     <header>
         <div class="logo">
+            <!-- logo et bouton du site pour retourner à l'accueil -->
             <a href="/public/index.html" class="logoLink">
+                <!-- image du logo -->
                 <img src="/assets/images/logo.jpg" alt="Logo de la page" width="100" height="100">
             </a>
         </div>
     </header>
-    <main>
-        <h1 class="title-fist">Fiche de présentation</h1>
 
-        <div class="fichePresentation-Ryann">
-            <div class="photo-ryann">
-                <img src="/assets/images/image-ryann.png" alt="Photo de Ryann">
+    <main>
+        <!-- titre principal de la page -->
+        <h1 class="titleFirst">Fiche de présentation</h1>
+
+        <!-- section principale avec la présentation + nom/prénom/âge -->
+        <section class="fichePresentationRyann">
+            <!-- photo de Ryann -->
+            <img class="photoRyannImage" src="/assets/images/image-ryann.png" alt="Photo de Ryann">
+            <!-- nom + age de Ryann -->
+            <div class="descriptionRyann">
+                <h2 class="titleName">Ryann RENÉ-CORAIL</h2>
+                <p class="description descAge">18 ans</p>
             </div>
-            <div class="description-ryann">
-                <h2 class="title-second">Ryann RENÉ-CORAIL</h2>
-                <p class="description">18 ans</p>
-            </div>
-            <h3 class="title-third">À propos de moi</h3>
+            <!-- titre h3 de la description de Ryann -->
+            <h3 class="titleDescription">À propos de moi</h3>
+            <!-- courte description de Ryann -->
             <p class="description">Grand Amoureux du sport, Ryann est passé par tout les sports de ballons les plus
                 connus, ce qui l'amène
                 aujourd'hui à être passionné par le basket. En tant qu'enfant d'internet, il s'intéresse à pleins de
                 choses différentes et est sensible à tout ce qui touche à l'art. En particulier la musique.
                 Il est curieux et aime apprendre de nouvelles choses.</p>
+        </section>
 
-            <div class="hobbies-box">
-                <div class="box">
-                    <a href="/public/pages/musique.html" class="box-link">
-                        <h3 class="title-hobbies">Musique</h3>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="/public/pages/films.html" class="box-link">
-                        <h3 class="title-hobbies">Films & Séries</h3>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="/public/pages/jeux.html" class="box-link">
-                        <h3 class="title-hobbies">Jeux Vidéos</h3>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="/public/pages/plats.html" class="box-link">
-                        <h3 class="title-hobbies">Plats</h3>
-                    </a>
-                </div>
-            </div>
+        <!-- section secondaire avec les boutons pour visiter les pages de hobbies -->
+        <section class="hobbiesBox">
+
+            <!-- bouton pour la page musique.html -->
+                <a href="/public/pages/musique.html" class="boxLink">Musique</a>
+            <!-- bouton pour la page films.html -->
+                <a href="/public/pages/films.html" class="boxLink">Séries</a>
+            <!-- bouton pour la page jeux.html -->
+                <a href="/public/pages/jeux.html" class="boxLink">Vidéos</a>
+            <!-- bouton pour la page plats.html -->
+                <a href="/public/pages/plats.html" class="boxLink">Plats</a>
+        </section>
     </main>
+
+
     <footer>
         <div class="links-ryann">
+            <!-- liens pratiques vers les réseaux de Ryann -->
             <div class="practical-links">
                 <ul class="practical-list">
+                    <!-- lien vers le github -->
                     <li><a href="https://github.com/mp5daFool" class="practical-link-list" target="_blank">GitHub</a>
                     </li>
+                    <!-- lien vers le slack -->
                     <li><a href="https://la-toile-emlyon.slack.com/team/U08JCM3211C" class="practical-link-list"
                             target="_blank">Slack</a></li>
                 </ul>
@@ -76,5 +87,6 @@
         </div>
     </footer>
 
-    <script src="/smooth-scroll.js"></script>
+    <!-- ajout du fichier scrolltotop.js pour le bouton de scroll vers le haut -->
+    <script src="/scrolltotop.js"></script>
 </body>

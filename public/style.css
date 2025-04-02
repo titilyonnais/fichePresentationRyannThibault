@@ -1,57 +1,36 @@
-.photo-ryann img {
-    width: 250px;
-    height: 250px;
-    border-radius: 200px;
+body {
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 120px 150px 0 150px;
+    background-color: #fff;
 }
 
-.description-ryann {
-    display: flex;
-    justify-content: flex-start;
-    /* Aligne les éléments à gauche */
-    align-items: center;
-    /* Aligne verticalement les éléments au centre */
-    gap: 10px;
-    /* Ajoute un espace entre le `<h3>` et le `<p>` */
+/* design responsive pour les marges de l'écran */
+@media (max-width: 1024px) {
+    body {
+        padding: 120px 100px 0 100px;
+    }
 }
 
-.description-ryann h3,
-.description-ryann p {
-    margin: 0;
-    /* Supprime les marges par défaut */
+@media (max-width: 768px) {
+    body {
+        padding: 120px 50px 0 50px;
+    }
 }
 
-.title-fist {
-    font-size: 50px;
+@media (max-width: 480px) {
+    body {
+        padding: 120px 20px 0 20px;
+    }
 }
 
-.description-ryann .title-second {
-    font-size: 35px;
-}
-
-.description-ryann p {
-    font-size: 30px;
-    padding-left: 20px;
-    font-weight: 500;
-}
-
-.title-third {
-    font-size: 25px;
-}
-
+/* pour tous les paragraphes du site */
 .description {
     font-size: 20px;
     padding: 20px 0;
-    /* Ajoute un peu d'espace au-dessus et en dessous du texte */
 }
 
-.title-hobbies {
-    font-size: 1.5em;
-    font-style: normal;
-    font-weight: 500;
-    color: #0088cc;
-}
-
-.scroll-to-top {
+/* pour le bouton pour remonter en haut de la page */
+.scrollToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -67,85 +46,118 @@
     align-items: center;
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animation fluide */
 }
 
-.scroll-to-top img {
+.scrollToTop .scrollToTopImage {
     width: 100%;
     height: 100%;
 }
 
-.scroll-to-top:hover {
+.scrollToTop:hover {
     transform: scale(1.1);
-    /* Agrandit légèrement le bouton */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Ombre plus prononcée au survol */
 }
 
-.hobbies-box {
+/* pour le titre de la page */
+.titleFirst {
+    font-size: 50px;
+}
+
+/* pour la photo de Ryann */
+.photoRyannImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+}
+
+/* pour le container du nom + âge de Ryann */
+.descriptionRyann {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* modifie le titre du container descriptionRyann*/
+.descriptionRyann .titleName {
+    font-size: 35px;
+}
+
+/* modifie le paragraphe du container descriptionRyann*/
+.descriptionRyann .descAge {
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+/* modifie le texte du container descriptionRyann*/
+.description-ryann .titleName,
+.description-ryann .descAge {
+    margin: 0;
+}
+
+/* modifie le titre de la description*/
+.titleDescription {
+    font-size: 25px;
+}
+
+/* modifie le container des boutons des hobbies*/
+.hobbiesBox {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 colonnes de largeur égale */
     gap: 20px;
-    /* Espacement entre les carrés */
     margin: 40px 0;
-    /* Espacement autour de la grille */
-}
-
-.box {
-    background: #eeeeee;
-    /* Couleur de fond */
-    border: 1px solid #666666;
-    /* Bordure subtile */
-    border-radius: 50px;
-    /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre subtile */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    /* Hauteur des carrés */
+    justify-content: space-around;
+}
+
+/* modifiele style des boutons */
+.boxLink {
+    cursor: pointer;
+    display: inline-block;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* Animation au survol */
-}
-
-.box:hover {
-    /*transform: scale(1.05);*/
-    /* Agrandit légèrement au survol */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
-    color: #0088cc;
-    /* Ombre plus prononcée au survol */
-}
-
-.box-link {
+    font-size: 30px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 980px;
+    color: rgb(0, 113, 227, 0.8);
+    background: rgba(0, 0, 0, 0);
+    border-color: rgb(0, 113, 227, 0.8);
     text-decoration: none;
-    /* Supprime le soulignement des liens */
-    /* Couleur du texte */
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
-/* Responsive Design */
+/* modifie les boutons au survol */
+.boxLink:hover {
+    background: rgb(0, 113, 227, 0.8);
+    color: #fff;
+}
+
+/* modifie les boutons au clic */
+.boxLink:active {
+    background: rgba(0, 113, 227, 0.90);
+}
+
+/* design responsive pour les boutons de hobbies */
 @media (max-width: 1024px) {
     .hobbies-box {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colonnes sur les écrans moyens */
     }
 }
 
 @media (max-width: 768px) {
     .hobbies-box {
         grid-template-columns: 1fr;
-        /* 1 colonne sur les petits écrans */
     }
 }
 
@@ -279,42 +291,39 @@
 .buttonBackHome {
     display: flex;
     justify-content: center;
-    /* Centre le bouton horizontalement */
     margin: 20px 0;
-    /* Espacement autour du bouton */
 }
 
 .buttonBackHomeLink {
-    display: inline-flex;
-    /* Utilise flexbox pour centrer le contenu */
-    justify-content: center;
-    /* Centre horizontalement */
-    align-items: center;
-    /* Centre verticalement */
-    background-color: #0088cc;
-    /* Couleur de fond bleue */
-    color: white;
-    /* Couleur du texte */
-    font-size: 18px;
-    /* Taille du texte */
-    font-weight: bold;
-    /* Texte en gras */
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 30px;
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 980px;
+    background: rgba(0, 113, 227, 0.80);
+    border-color: rgba(0, 0, 0, 0);
     text-decoration: none;
-    /* Supprime le soulignement */
-    padding: 15px 35px;
-    /* Espacement intérieur (vertical et horizontal) */
-    border-radius: 50px;
-    /* Forme de pilule */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    /* Animation fluide */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre subtile */
-    line-height: 1;
-    /* Assure que la hauteur de ligne n'affecte pas l'alignement */
 }
 
 .buttonBackHomeLink:hover {
-    text-decoration: underline;
+    background: rgba(0, 113, 227, 0.76);
+}
+
+.buttonBackHomeLink:active {
+    background: rgba(0, 113, 227, 0.9);
 }
 
 /* Conteneur principal pour les plats */

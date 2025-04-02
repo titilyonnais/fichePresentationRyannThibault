@@ -1,45 +1,30 @@
 footer {
     background-color: #fff;
-    /* Couleur de fond du footer */
     padding: 30px;
-    /* Ajoute un espace intérieur */
     border-top: 1px solid #979797;
-    /* Ligne de séparation en haut du footer */
     text-align: center;
-    /* Centre le contenu horizontalement */
 }
 
 .links-ryann {
     display: flex;
-    /* Aligne les éléments sur une seule ligne */
     justify-content: center;
-    /* Centre les liens horizontalement */
     align-items: center;
-    /* Aligne les liens verticalement */
 }
 
 .practical-list {
     list-style: none;
-    /* Supprime les puces des listes */
     display: flex;
-    /* Aligne les éléments de la liste sur une seule ligne */
     gap: 20px;
-    /* Ajoute un espace entre les liens */
     margin: 0;
-    /* Supprime les marges par défaut */
     padding: 0;
-    /* Supprime les paddings par défaut */
 }
 
 .practical-link-list {
     text-decoration: none;
-    /* Supprime le soulignement des liens */
     color: #0088cc;
-    /* Couleur des liens */
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
-    /* Animation pour le changement de couleur */
 }
 
 .practical-link-list:hover {
